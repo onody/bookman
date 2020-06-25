@@ -13,6 +13,7 @@ Things you may want to cover:
 
 ```
 RAILS_ENV=development bundle install
+RAILS_ENV=development bundle exec rails webpacker:install
 ```
 
 * Database creation
