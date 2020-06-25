@@ -1,0 +1,32 @@
+<%= form_with(model: asset, local: true) do |form| %>
+  <% if asset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(asset.errors.count, "error") %> prohibited this asset from being saved:</h2>
+
+      <ul>
+        <% asset.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bank %>
+    <%= form.collection_select(:bank_id, Bank.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occurred_at %>
+    <%= form.datetime_field :occurred_at, value: (form.object.occurred_at || Time.now) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

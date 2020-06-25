@@ -46,4 +46,8 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
+
+  # for method not allowed problem
+  # https://stackoverflow.com/questions/31412688/post-returns-405-method-not-allowed
+  config.assets.prefix = '/assetz'
 end

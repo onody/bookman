@@ -1,6 +1,6 @@
 class Asset < ApplicationRecord
   with_options presence: true do
-    validates :book_id
+    validates :bank
     validates :amount
     validates :occurred_at
   end

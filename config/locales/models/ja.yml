@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      asset: 資産
+      bank: 銀行
+    attributes:
+      asset:
+        id: ID
+        bank: 銀行
+        amount: 金額
+        occurred_at: 発生日
+      bank:
+        id: ID
+        name: 銀行名
