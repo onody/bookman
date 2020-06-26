@@ -1,0 +1,21 @@
+<h1><%= t '.title' %></h1>
+
+<%= link_to t('assets.common.new_asset'), new_asset_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t '.month' %></th>
+      <th><%= t '.amount' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monthly_assets.each do |asset| %>
+      <tr>
+        <td><%= asset[:month] %></td>
+        <td><%= asset[:amount].to_s(:delimited) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

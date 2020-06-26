@@ -1,7 +1,14 @@
 
 ja:
   assets:
+    common:
+      new_asset: 資産を登録
     index:
       bank_name: 銀行名
       amount: 金額
       occurred_at: 発生日
+  top:
+    index:
+      title: 毎月の資産推移
+      month: 月
+      amount: 資産金額
