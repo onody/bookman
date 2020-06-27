@@ -15,3 +15,10 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import 'bootstrap-material-design'
+import '../stylesheets/application'
+
+require('jquery')
+require("moment/locale/ja")
+require("tempusdominus-bootstrap-4")

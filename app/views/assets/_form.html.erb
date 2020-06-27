@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :bank %>
-    <%= form.collection_select(:bank_id, Bank.all, :id, :name) %>
+    <%= form.collection_select :bank_id, Bank.all, :id, :name, {}, { class: "form-control" } %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :occurred_at %>
-    <%= form.datetime_field :occurred_at, value: (form.object.occurred_at || Time.now) %>
+    <%= form.datetime_select :occurred_at, {}, class: 'form-control' %>
   </div>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", { class: "bbtn btn-raised btn-primary" } %>
   </div>
 <% end %>

@@ -1,8 +1,8 @@
+<h1><%= t('activerecord.models.asset') %></h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Assets</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th><%= t '.bank_name' %></th>
@@ -16,7 +16,7 @@
     <% @assets.each do |asset| %>
       <tr>
         <td><%= asset.bank.name %></td>
-        <td><%= asset.amount %></td>
+        <td><%= asset.amount.to_s(:delimited) %></td>
         <td><%= asset.occurred_at %></td>
         <td><%= link_to 'Show', asset %></td>
         <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Asset', new_asset_path %>
+<%= link_to t('assets.common.new_asset'), new_asset_path, class: 'btn btn-raised btn-primary' %>

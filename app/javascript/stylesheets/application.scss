@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap-material-design/scss/bootstrap-material-design';
+@import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4";
+
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
