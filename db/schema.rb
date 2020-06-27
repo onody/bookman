@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_25_221759) do
+ActiveRecord::Schema.define(version: 2020_06_27_090212) do
 
   create_table "assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "bank_id", null: false, unsigned: true
     t.decimal "amount", precision: 10, default: "0", null: false, unsigned: true
-    t.time "occurred_at", null: false
+    t.datetime "occurred_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
