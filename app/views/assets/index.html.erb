@@ -5,20 +5,20 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col"><%= t '.occurred_at' %></th>
       <th scope="col"><%= t '.bank_name' %></th>
       <th scope="col" class="text-right"><%= t '.amount' %></th>
-      <th scope="col"><%= t '.occurred_at' %></th>
-      <th scope="col"></th>
+      <th scope="col" class="text-right"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @assets.each do |asset| %>
       <tr>
+        <td><%= l asset.occurred_at, format: :custom_monthy %></td>
         <td><%= asset.bank.name %></td>
         <td class="text-right"><%= asset.amount.to_s(:delimited) %></td>
-        <td><%= asset.occurred_at %></td>
-        <td>
+        <td class="text-right">
           <%= link_to 'Edit', edit_asset_path(asset) %> /
           <%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>

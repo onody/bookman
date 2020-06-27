@@ -7,7 +7,7 @@
     <tr>
       <th><%= t '.id' %></th>
       <th><%= t '.name' %></th>
-      <th></th>
+      <th class="text-right"></th>
     </tr>
   </thead>
 
@@ -16,7 +16,7 @@
       <tr>
         <td><%= bank.id %></td>
         <td><%= bank.name %></td>
-        <td>
+        <td class="text-right">
           <%= link_to 'Edit', edit_bank_path(bank) %> /
           <%= link_to 'Destroy', bank, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>

@@ -4,7 +4,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.all
+    @assets = Asset.all.order(occurred_at: "DESC")
   end
 
   # GET /assets/1
