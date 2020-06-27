@@ -7,6 +7,12 @@ ja:
       bank_name: 銀行名
       amount: 金額
       occurred_at: 発生日
+  banks:
+    common:
+      new_bank: 銀行を登録
+    index:
+      id: ID
+      name: 銀行名
   top:
     index:
       title: 毎月の資産推移
