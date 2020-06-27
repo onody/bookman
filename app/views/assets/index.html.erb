@@ -5,10 +5,10 @@
 <table class="table">
   <thead>
     <tr>
-      <th><%= t '.bank_name' %></th>
-      <th><%= t '.amount' %></th>
-      <th><%= t '.occurred_at' %></th>
-      <th colspan="3"></th>
+      <th scope="col"><%= t '.bank_name' %></th>
+      <th scope="col" class="text-right"><%= t '.amount' %></th>
+      <th scope="col"><%= t '.occurred_at' %></th>
+      <th scope="col"></th>
     </tr>
   </thead>
 
@@ -16,11 +16,12 @@
     <% @assets.each do |asset| %>
       <tr>
         <td><%= asset.bank.name %></td>
-        <td><%= asset.amount.to_s(:delimited) %></td>
+        <td class="text-right"><%= asset.amount.to_s(:delimited) %></td>
         <td><%= asset.occurred_at %></td>
-        <td><%= link_to 'Show', asset %></td>
-        <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
-        <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Edit', edit_asset_path(asset) %> /
+          <%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
